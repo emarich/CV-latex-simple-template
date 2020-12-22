@@ -1,4 +1,5 @@
 \documentclass[11pt]{article}
+\usepackage[margin=1.3in,nomarginpar]{geometry}
 %% language
 % \usepackage[slovak]{babel}
 \usepackage[utf8]{inputenc}
@@ -20,6 +21,9 @@
 \titlespacing\section{0pt}{20pt plus 0pt minus 0pt}{-7pt plus 0pt minus 0pt} % {left}{above}{below}
 %% tab stops
 \usepackage{tabto}
+%% multicolumn items 
+\usepackage{multicol}
+\setlength{\columnsep}{8pt}
 
 \begin{document}
 
@@ -27,7 +31,7 @@
         {\fontsize{35}{45}\selectfont Name Name} \\
         \ \\
         \faAsterisk{ 01.01.1900} \\
-        \faMapMarker{ Street 11 · 11111 City} \\
+        \faMapMarker{ Street 11 · 111 11 City · State} \\
         \faEnvelope{ email@email.com} \\
         \faPhone{ +111 222 333 444} \\
         \faLinkedin{ url} \\
@@ -63,14 +67,18 @@ I am awesome, give me that job.
 \noindent{\rule{\linewidth}{0.4pt}}
 \textbf{Language skills}
 \NumTabs{2}
+\TabPositions{3cm}
 \begin{itemize}
-        \item English \tab B2 level, upper intermediate \\ \phantom{invisible} \tab spoken and written
+        \item English \tab B2 level, upper intermediate spoken and written
 \end{itemize}
 \textbf{Computer skills}
+\begin{multicols}{2}
 \begin{itemize}
         \item Skill1 \tab advanced
         \item Skill2 \tab beginner
+        \item Skill3 \tab pre-intermediate
 \end{itemize}
+\end{multicols}
 
 \end{document}
 Comments not visible in document.
